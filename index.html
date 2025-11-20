@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarvidhi Partners | Legal Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --office-gray: #f0f2f5;
+            --memo-paper: #fffdf0;
+            --highlighter-yellow: #ffff80;
+            --dm-blue: #174ea6;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #dcdcdc; /* Dull office carpet gray */
+            background-image: radial-gradient(#cfcfcf 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .font-typewriter {
+            font-family: 'Special Elite', cursive;
+        }
+        .paper-shadow {
+            box-shadow: 1px 1px 0px rgba(0,0,0,0.1), 
+                        2px 2px 0px rgba(0,0,0,0.1), 
+                        3px 3px 0px rgba(0,0,0,0.1);
+        }
+        .sticky-note {
+            background-color: #fff740;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            transform: rotate(-2deg);
+            transition: transform 0.2s;
+        }
+        .sticky-note:hover {
+            transform: rotate(0deg) scale(1.05);
+        }
+        .folder-tab {
+            clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%);
+        }
+        /* Blinking Cursor for Typewriter effect */
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            background-color: black;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Navigation: Styled like a corporate header -->
+    <nav class="bg-white border-b-4 border-gray-800 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <!-- Logo Area -->
+                    <div class="bg-black text-white p-2 mr-3 font-bold text-xl tracking-widest border-2 border-gray-600">
+                        SP
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold uppercase tracking-tighter text-gray-900">Sarvidhi<span class="text-gray-500">Partners</span></h1>
+                        <p class="text-xs text-gray-500 uppercase tracking-widest">Attorneys at Law</p>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-black uppercase font-semibold text-sm tracking-wider hover:bg-gray-100 px-3 py-2 rounded">The Office</a>
+                    <a href="#about" class="text-gray-600 hover:text-black uppercase font-semibold text-sm tracking-wider hover:bg-gray-100 px-3 py-2 rounded">The Team</a>
+                    <a href="#services" class="text-gray-600 hover:text-black uppercase font-semibold text-sm tracking-wider hover:bg-gray-100 px-3 py-2 rounded">Services</a>
+                    <a href="#contact" class="bg-gray-800 text-white px-4 py-2 text-sm uppercase font-bold hover:bg-black transition">Contact HR</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-50 border-t border-gray-200">
+            <a href="#home" class="block px-4 py-3 text-gray-700 hover:bg-gray-200 border-b border-gray-200">The Office</a>
+            <a href="#about" class="block px-4 py-3 text-gray-700 hover:bg-gray-200 border-b border-gray-200">The Team</a>
+            <a href="#services" class="block px-4 py-3 text-gray-700 hover:bg-gray-200 border-b border-gray-200">Services</a>
+            <a href="#contact" class="block px-4 py-3 text-gray-700 hover:bg-gray-200 font-bold">Contact HR</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section: "Documentary Style" -->
+    <section id="home" class="relative bg-white py-20 border-b border-gray-300 overflow-hidden">
+        <div class="absolute top-10 right-10 opacity-10 rotate-12 transform">
+            <i data-lucide="stamp" class="w-64 h-64 text-red-600"></i>
+        </div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-block bg-yellow-200 px-2 py-1 mb-4 text-sm font-typewriter border border-yellow-400 transform -rotate-1">
+                        Memo: Re: Your Legal Rights
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
+                        Legal Solutions.<br>
+                        No Nonsense.<br>
+                        <span class="text-gray-500" id="typewriter-text"></span><span class="cursor">&nbsp;</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8 border-l-4 border-blue-600 pl-4 italic">
+                        "You miss 100% of the legal battles you don't fight. <br>– Wayne Gretzky" <br>– Michael Scott <br>– Sarvidhi Partners
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="bg-black text-white px-8 py-4 text-center font-bold uppercase tracking-wider shadow-lg hover:bg-gray-800 transition flex items-center justify-center gap-2">
+                            <i data-lucide="briefcase" class="w-5 h-5"></i> Start Consultation
+                        </a>
+                        <a href="#about" class="bg-white border-2 border-gray-300 text-gray-800 px-8 py-4 text-center font-bold uppercase tracking-wider hover:bg-gray-50 transition flex items-center justify-center gap-2">
+                            <i data-lucide="user" class="w-5 h-5"></i> Meet The Manager
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Visual: A mess of files and a mug -->
+                <div class="relative hidden md:block">
+                    <div class="bg-white p-6 border border-gray-300 shadow-2xl rotate-2 w-full max-w-md mx-auto transform transition hover:rotate-0 duration-500">
+                        <div class="border-b-2 border-black pb-4 mb-4 flex justify-between items-center">
+                            <span class="font-typewriter text-xl font-bold">CONFIDENTIAL</span>
+                            <i data-lucide="paperclip" class="w-6 h-6 text-gray-400"></i>
+                        </div>
+                        <div class="space-y-3 font-typewriter text-sm text-gray-600">
+                            <p>To: All Clients</p>
+                            <p>From: Sarvidhi Partners</p>
+                            <p>Subject: Protecting Your Future</p>
+                            <p class="mt-4">We treat every case with the seriousness of a pretzel day. Whether it's corporate law or civil disputes, we are the "World's Best Lawyer" (mug pending).</p>
+                            <div class="mt-8 pt-4 border-t border-gray-200 flex justify-between items-end">
+                                <img src="/api/placeholder/100/50" alt="Signature" class="opacity-50" onerror="this.style.display='none'; document.getElementById('sig-placeholder').style.display='block'">
+                                <div id="sig-placeholder" class="font-cursive text-2xl text-blue-800 hidden" style="font-family: cursive;">Sarvidhi</div>
+                                <i data-lucide="coffee" class="w-12 h-12 text-gray-800"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sticky Note -->
+                    <div class="absolute -bottom-4 -left-4 sticky-note p-4 w-40 h-40 flex items-center justify-center text-center font-handwriting">
+                        <p class="font-typewriter text-sm text-gray-800">Don't forget to file the TPS reports... and your lawsuit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section: "Talking Head" Interview Style -->
+    <section id="about" class="py-20 bg-gray-100">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <span class="bg-blue-800 text-white px-2 py-1 text-xs font-bold uppercase tracking-widest">Interview Segment</span>
+                <h2 class="text-3xl font-bold mt-4">The Regional Manager (Founding Partner)</h2>
+            </div>
+
+            <div class="bg-white p-2 shadow-lg max-w-2xl mx-auto transform rotate-1">
+                <div class="border-4 border-gray-200 p-6 flex flex-col md:flex-row gap-8 items-center">
+                    <div class="w-48 h-48 flex-shrink-0 bg-gray-200 border-2 border-gray-400 flex items-center justify-center relative overflow-hidden">
+                        <!-- Placeholder for User Image -->
+                        <i data-lucide="user" class="w-24 h-24 text-gray-400"></i>
+                        <div class="absolute bottom-0 w-full bg-blue-900 text-white text-center text-xs py-1">
+                            SARVIDHI PARTNERS
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Founder & Lead Counsel</h3>
+                        <p class="font-typewriter text-gray-600 mb-4">
+                            "I started Sarvidhi Partners because I wanted to create a law firm where everybody knows your name. Currently, I am the Founding Partner, the Junior Associate, and the Assistant to the Regional Manager. We are expanding soon, but right now, you get 100% of my attention."
+                        </p>
+                        <div class="flex items-center gap-2 text-sm font-bold text-gray-500">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                            <span>Physical Office: Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- The Dundie -->
+            <div class="mt-12 text-center">
+                <div class="inline-flex items-center gap-3 bg-yellow-100 border border-yellow-300 px-6 py-3 rounded-full">
+                    <i data-lucide="trophy" class="w-6 h-6 text-yellow-600"></i>
+                    <span class="text-sm font-bold text-yellow-800">Awarded "Whitest Sneakers" & "Best Legal Defense" 2024</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section: "The Conference Room" -->
+    <section id="services" class="py-20 bg-white border-t border-b border-gray-300">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex items-center mb-12">
+                <div class="h-px bg-gray-300 flex-1"></div>
+                <h2 class="px-6 text-3xl font-bold uppercase tracking-widest text-gray-400">Conference Room Agenda</h2>
+                <div class="h-px bg-gray-300 flex-1"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-[#fffdf0] p-6 border border-gray-200 shadow-md hover:shadow-xl transition relative group">
+                    <div class="absolute -top-3 left-4 bg-red-600 text-white text-xs font-bold px-2 py-1 transform -rotate-2">URGENT</div>
+                    <i data-lucide="scale" class="w-10 h-10 text-gray-700 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3 font-typewriter underline decoration-2 decoration-blue-500">Dispute Resolution</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Conflict in the workplace or outside? We settle disputes faster than Dwight settles a beet sale. Civil, commercial, and personal disputes handled with care.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-[#fffdf0] p-6 border border-gray-200 shadow-md hover:shadow-xl transition relative group">
+                    <div class="absolute -top-3 left-4 bg-blue-600 text-white text-xs font-bold px-2 py-1 transform rotate-2">APPROVED</div>
+                    <i data-lucide="file-text" class="w-10 h-10 text-gray-700 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3 font-typewriter underline decoration-2 decoration-yellow-500">Contract Review</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        We read the fine print so you don't have to. From employment agreements to vendor contracts. No "that's what she said" jokes included in the final draft.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-[#fffdf0] p-6 border border-gray-200 shadow-md hover:shadow-xl transition relative group">
+                    <div class="absolute -top-3 left-4 bg-green-600 text-white text-xs font-bold px-2 py-1 transform -rotate-1">PENDING</div>
+                    <i data-lucide="building" class="w-10 h-10 text-gray-700 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3 font-typewriter underline decoration-2 decoration-red-500">Corporate Advisory</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Setting up a new branch? Incorporating? We handle the boring paperwork so you can focus on being the "World's Best Boss."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats / Divider -->
+    <div class="bg-gray-800 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-around text-center font-typewriter">
+            <div class="mb-6 md:mb-0">
+                <div class="text-4xl font-bold text-yellow-400 mb-1">100%</div>
+                <div class="text-sm uppercase tracking-widest">Client Dedication</div>
+            </div>
+            <div class="mb-6 md:mb-0">
+                <div class="text-4xl font-bold text-yellow-400 mb-1">1</div>
+                <div class="text-sm uppercase tracking-widest">Physical Office</div>
+            </div>
+            <div>
+                <div class="text-4xl font-bold text-yellow-400 mb-1">24/7</div>
+                <div class="text-sm uppercase tracking-widest">Email Availability</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section: "Complaint Box" Style -->
+    <section id="contact" class="py-20 bg-gray-200">
+        <div class="max-w-3xl mx-auto px-4">
+            <div class="bg-white p-8 md:p-12 shadow-2xl border-t-8 border-black relative">
+                <!-- Paperclip graphic -->
+                <div class="absolute -top-4 right-10 transform rotate-45">
+                     <i data-lucide="paperclip" class="w-12 h-12 text-gray-400"></i>
+                </div>
+
+                <h2 class="text-3xl font-bold mb-2 text-gray-900">Get in Touch</h2>
+                <p class="mb-8 text-gray-500 font-typewriter">Fill out this form. It will go directly to the special filing cabinet. (My inbox).</p>
+
+                <form class="space-y-6" onsubmit="event.preventDefault(); alert('Thank you! Your message has been filed under \'Important\'.');">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-gray-500 mb-1">Full Name</label>
+                            <input type="text" class="w-full bg-gray-50 border border-gray-300 p-3 focus:outline-none focus:border-blue-500 font-typewriter" placeholder="Jim Halpert">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-gray-500 mb-1">Email Address</label>
+                            <input type="email" class="w-full bg-gray-50 border border-gray-300 p-3 focus:outline-none focus:border-blue-500 font-typewriter" placeholder="jim@dundermifflin.com">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-gray-500 mb-1">Subject</label>
+                        <select class="w-full bg-gray-50 border border-gray-300 p-3 focus:outline-none focus:border-blue-500 font-typewriter text-gray-600">
+                            <option>General Inquiry</option>
+                            <option>Identity Theft</option>
+                            <option>Contract Review</option>
+                            <option>Declaration of Bankruptcy</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-gray-500 mb-1">Message</label>
+                        <textarea rows="4" class="w-full bg-gray-50 border border-gray-300 p-3 focus:outline-none focus:border-blue-500 font-typewriter" placeholder="State your business..."></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-blue-800 text-white font-bold uppercase tracking-widest py-4 hover:bg-blue-900 transition shadow-lg">
+                        Submit to HR
+                    </button>
+                </form>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <p class="font-bold text-gray-700 mb-2">Sarvidhi Partners</p>
+                <div class="flex justify-center gap-6 text-gray-600 text-sm">
+                    <a href="mailto:contact@sarvidhipartners.in" class="flex items-center hover:text-blue-800">
+                        <i data-lucide="mail" class="w-4 h-4 mr-2"></i> contact@sarvidhipartners.in
+                    </a>
+                    <a href="#" class="flex items-center hover:text-blue-800">
+                        <i data-lucide="globe" class="w-4 h-4 mr-2"></i> www.sarvidhipartners.in
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm font-typewriter">
+        <div class="mb-4">
+            <i data-lucide="scale" class="w-8 h-8 mx-auto text-gray-600 mb-2"></i>
+        </div>
+        <p>&copy; 2025 Sarvidhi Partners. All rights reserved.</p>
+        <p class="mt-2 text-xs text-gray-600">"Bears. Beets. Battlestar Galactica." - And Legal Justice.</p>
+    </footer>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Typewriter Effect Logic
+        const phrases = [
+            "Business Law.", 
+            "Civil Disputes.", 
+            "Contract Review.", 
+            "Beet Farming Law (Just Kidding)."
+        ];
+        let currentPhrase = 0;
+        let isDeleting = false;
+        let text = "";
+        const typingSpeed = 100;
+        const deletingSpeed = 50;
+        const pauseTime = 2000;
+
+        function typeWriter() {
+            const fullText = phrases[currentPhrase];
+            const element = document.getElementById("typewriter-text");
+
+            if (isDeleting) {
+                text = fullText.substring(0, text.length - 1);
+            } else {
+                text = fullText.substring(0, text.length + 1);
+            }
+
+            element.innerHTML = text;
+
+            let typeSpeed = typingSpeed;
+
+            if (isDeleting) {
+                typeSpeed = deletingSpeed;
+            }
+
+            if (!isDeleting && text === fullText) {
+                typeSpeed = pauseTime;
+                isDeleting = true;
+            } else if (isDeleting && text === "") {
+                isDeleting = false;
+                currentPhrase = (currentPhrase + 1) % phrases.length;
+            }
+
+            setTimeout(typeWriter, typeSpeed);
+        }
+
+        // Start Typewriter
+        document.addEventListener('DOMContentLoaded', typeWriter);
+
+        // Mobile Menu Logic
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
