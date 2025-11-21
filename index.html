@@ -359,12 +359,35 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm font-typewriter">
-        <div class="mb-4">
-            <i data-lucide="scale" class="w-8 h-8 mx-auto text-gray-600 mb-2"></i>
+   <footer class="bg-gray-900 text-gray-400 py-8 border-t-4 border-gray-800 font-typewriter text-sm">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+
+            <div class="md:w-1/3 text-center md:text-left order-3 md:order-1">
+                <p class="text-[10px] text-gray-500 leading-relaxed">
+                    The content, design, and code of this website are the exclusive property of <span class="text-gray-400">Sarvidhi Partners</span>. 
+                    Unauthorized copying, reproduction, or distribution of this material is strictly prohibited.
+                </p>
+            </div>
+
+            <div class="md:w-1/3 text-center order-1 md:order-2">
+                <div class="mb-2">
+                    <i data-lucide="scale" class="w-6 h-6 mx-auto text-gray-600"></i>
+                </div>
+                <p class="font-bold text-gray-300">&copy; 2025 Sarvidhi Partners</p>
+                <p class="text-[10px] text-gray-600 mt-1">
+                    made with love and diligence by <span class="text-gray-500 font-bold">Black Gown Technologies</span>
+                </p>
+            </div>
+
+            <div class="md:w-1/3 text-center md:text-right order-2 md:order-3">
+                <div class="inline-flex gap-4 text-xs uppercase tracking-widest">
+                    <a href="#" onclick="document.getElementById('legal-modal').classList.remove('hidden'); return false;" class="hover:text-white transition border-b border-transparent hover:border-white pb-1">Disclaimer</a>
+                    <span class="text-gray-700">|</span>
+                    <a href="#contact" class="hover:text-white transition border-b border-transparent hover:border-white pb-1">Contact</a>
+                </div>
+            </div>
+
         </div>
-        <p>&copy; 2025 Sarvidhi Partners. All rights reserved.</p>
-        <p class="mt-2 text-xs text-gray-600">made with love and diligence by Black Gown Technologies</p>
     </footer>
 
     <script>
@@ -456,6 +479,7 @@
     </script>
 </body>
 </html>
+
 
 
 
